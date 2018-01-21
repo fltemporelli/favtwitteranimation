@@ -1,0 +1,64 @@
+@keyframes scaleColor {
+  0% {
+    transform: translate(-50%, -50%) scale(0.03); }
+  3% {
+    transform: translate(-50%, -50%) scale(0); }
+  20% {
+    transform: translate(-50%, -50%) scale(0); }
+  40% {
+    transform: translate(-50%, -50%) scale(0.04); }
+  60% {
+    transform: translate(-50%, -50%) scale(0.03); } }
+@keyframes scaleBorder {
+  10% {
+    transform: translate(-50%, -50%) scale(0.5);
+    background-color: pink; }
+  16% {
+    transform: translate(-50%, -50%) scale(1);
+    background-color: pink; }
+  20% {
+    background-color: transparent; } }
+.container {
+  position: relative;
+  height: 100px;
+  width: 100px; }
+  .container #heart {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%; }
+    .container #heart svg #path2417 {
+      fill: gray; }
+    .container #heart svg.scaleColor {
+      animation: scaleColor 1s forwards; }
+      .container #heart svg.scaleColor #path2417 {
+        fill: red; }
+  .container #circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: pink;
+    border: 2px solid pink;
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    /* position the top  edge of the element at the middle of the parent */
+    left: 50%;
+    /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%) scale(0); }
+    .container #circle.scaleBorder {
+      animation: scaleBorder 1s forwards; }
+  .container #particles {
+    width: 10px;
+    height: 10px;
+    z-index: 0;
+    position: absolute;
+    top: 50%;
+    /* position the top  edge of the element at the middle of the parent */
+    left: 50%;
+    /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+    /* This is a shorthand of
+       translateX(-50%) and translateY(-50%) */ }
+
+/*# sourceMappingURL=main.css.map */
