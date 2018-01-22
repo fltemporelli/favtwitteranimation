@@ -30,6 +30,30 @@
     }
 }
 
+@keyframes scaleRotate {
+    16% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    22% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    33% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    66% {
+        transform: translate(-50%, -50%) rotate(5deg);
+        border-color: magenta;
+    }
+    70% {
+        opacity: 0;
+        border-color: yellow;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) rotate(5deg);
+    }
+}
+
 
 .container {
     position: relative;
@@ -38,9 +62,13 @@
     #heart { 
         z-index: 2;
         position: absolute;
+        width: 32px;
+        height: 32px;
         top: 50%; 
-        left: 50%; 
+        left: 50%;
+        cursor: pointer;
         svg {
+            margin-top: 1px;
             #path2417 {
                 fill: gray;
             }
@@ -68,13 +96,17 @@
         }
     }
     #particles {
-        width: 10px;
-        height: 10px;
+        width: 32px;
+        height: 32px;
+        border: 3px dotted cyan;
+        border-radius: 100%;
         z-index: 0;
         position: absolute;
         top: 50%;  /* position the top  edge of the element at the middle of the parent */
         left: 50%; /* position the left edge of the element at the middle of the parent */
-    transform: translate(-50%, -50%); /* This is a shorthand of
-                                         translateX(-50%) and translateY(-50%) */
+        transform: translate(-50%, -50%) scale(0);
+        &.scaleRotate {
+            animation: scaleRotate ease-in-out 1s forwards;    
+        }
     }
 }
