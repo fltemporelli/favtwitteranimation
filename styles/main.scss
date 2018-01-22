@@ -68,7 +68,7 @@
         left: 50%;
         cursor: pointer;
         svg {
-            margin-top: 1px;
+            margin-top: 2px;
             #path2417 {
                 fill: gray;
             }
@@ -98,15 +98,69 @@
     #particles {
         width: 32px;
         height: 32px;
-        border: 3px dotted cyan;
         border-radius: 100%;
         z-index: 0;
         position: absolute;
         top: 50%;  /* position the top  edge of the element at the middle of the parent */
         left: 50%; /* position the left edge of the element at the middle of the parent */
-        transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%) /*scale(0)*/;
         &.scaleRotate {
             animation: scaleRotate ease-in-out 1s forwards;    
+        }
+        .particle {
+            width: 3px;
+            height: 3px;
+            background: blue;
+            border-radius: 100%;
+            position: absolute;
+        }
+        #particle1 {
+            top: 2px;
+            left: 2px;
+        }
+        #particle2 {
+            top: 6px;
+            left: 0px;
+        }
+        #particle3 {
+            bottom: 8px;
+            left: -2px;
+        }
+        #particle4 {
+            bottom: 4px;
+            left: 0px;
+        }
+        #particle5 {
+            bottom: -3px;
+            left: 14px;
+        }
+        #particle6 {
+            bottom: -3px;
+            left: 18px;
+        }
+        #particle7 {
+            bottom: 8px;
+            right: -2px;
+        }
+        #particle8 {
+            bottom: 4px;
+            right: 0px;
+        }
+        #particle9 {
+            top: 2px;
+            right: 2px;
+        }
+        #particle10 {
+            top: 6px;
+            right: 0px;
+        }
+        #particle13 {
+            top: -3px;
+            left: 14px;
+        }
+        #particle14 {
+            top: -3px;
+            left: 18px;
         }
     }
 }

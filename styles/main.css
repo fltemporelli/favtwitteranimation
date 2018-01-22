@@ -47,7 +47,7 @@
     left: 50%;
     cursor: pointer; }
     .container #heart svg {
-      margin-top: 1px; }
+      margin-top: 2px; }
       .container #heart svg #path2417 {
         fill: gray; }
     .container #heart svg.scaleColor {
@@ -72,7 +72,6 @@
   .container #particles {
     width: 32px;
     height: 32px;
-    border: 3px dotted cyan;
     border-radius: 100%;
     z-index: 0;
     position: absolute;
@@ -80,8 +79,50 @@
     /* position the top  edge of the element at the middle of the parent */
     left: 50%;
     /* position the left edge of the element at the middle of the parent */
-    transform: translate(-50%, -50%) scale(0); }
+    transform: translate(-50%, -50%); }
     .container #particles.scaleRotate {
       animation: scaleRotate ease-in-out 1s forwards; }
+    .container #particles .particle {
+      width: 3px;
+      height: 3px;
+      background: blue;
+      border-radius: 100%;
+      position: absolute; }
+    .container #particles #particle1 {
+      top: 2px;
+      left: 2px; }
+    .container #particles #particle2 {
+      top: 6px;
+      left: 0px; }
+    .container #particles #particle3 {
+      bottom: 8px;
+      left: -2px; }
+    .container #particles #particle4 {
+      bottom: 4px;
+      left: 0px; }
+    .container #particles #particle5 {
+      bottom: -3px;
+      left: 14px; }
+    .container #particles #particle6 {
+      bottom: -3px;
+      left: 18px; }
+    .container #particles #particle7 {
+      bottom: 8px;
+      right: -2px; }
+    .container #particles #particle8 {
+      bottom: 4px;
+      right: 0px; }
+    .container #particles #particle9 {
+      top: 2px;
+      right: 2px; }
+    .container #particles #particle10 {
+      top: 6px;
+      right: 0px; }
+    .container #particles #particle13 {
+      top: -3px;
+      left: 14px; }
+    .container #particles #particle14 {
+      top: -3px;
+      left: 18px; }
 
 /*# sourceMappingURL=main.css.map */
